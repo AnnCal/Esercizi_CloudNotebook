@@ -1,0 +1,10 @@
+c1->cd();
+TF1 *fa2 = new TF1("fa2","TMath::DiLog(x)",0,10);
+ fa2->Draw();
+ gROOT->GetListOfCanvases()->Draw()
+ ------------------------------------------------------------
+
+TF1 f1("f1","sin(x)/x",0.,10.); 
+f1.Draw();
+c1->SaveAs("example_console_root.png")
+-------------------------------------------------

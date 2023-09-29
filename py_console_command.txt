@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x=[0,1,2,3,4]
+y=[0,2,4,6,8]
+plt.plot(x,y) 
+--------------------------------------------
+import pandas as pd
+SHEET_ID = '1slHIWsBfLPmG0iQgLOao2imUou3EPbTiqyOAU_RecTM'
+SHEET_NAME = 'Foglio1'
+url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
+df = pd.read_csv(url)
+df['LNGS'][0:10]
+plt.plot(df['LNGS'][0:10])
+x = [i for i in range(0,10)]
+plt.scatter(x,df['LNGS'][0:10] )
+-----------------------------------------------------
+import pandas as pd
+SHEET_ID = '1slHIWsBfLPmG0iQgLOao2imUou3EPbTiqyOAU_RecTM'
+SHEET_NAME = 'Foglio1'
+url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
+df = pd.read_csv(url)
+df
+df['LNGS'][0:10]
+x = [i for i in range(0,10)]
+plt.plot(df['LNGS'][0:10])
+plt.scatter(x,df['LNGS'][0:10])
